@@ -6,17 +6,30 @@ package com.nickytm.ap.twitterclient;
 public class Tweet {
 
     private String userName;
-    private String tweet;
+    private String atName;
+    private String tweetText;
+    private String timeStamp;
 
-    public Tweet(String tweet) {
-        this.tweet = tweet;
+    public Tweet(String userName, String atName, String tweetText, String timeStamp) {
+        this.userName = userName;
+        this.atName = atName;
+        this.tweetText = tweetText;
+        this.timeStamp = timeStamp;
     }
 
     public String getUserName() {
         return userName;
     }
 
-    public String getTweet() {
-        return tweet;
+    public String getAtName() {
+        return atName;
+    }
+
+    public String getTweetText() {
+        return tweetText;
+    }
+
+    public String getTimeStamp() {
+        return timeStamp;
     }
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bird" />
+
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView"
+        android:padding="3dp"
+        android:text="@string/user_name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_atName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_userName"
+        android:layout_toEndOf="@+id/tv_userName"
+        android:padding="3dp"
+        android:text="@string/at_name"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_tweet"
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_userName"
+        android:layout_toEndOf="@+id/imageView"
+        android:text="@string/Tweet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:textSize="15sp"
+        android:text="@string/time_stamp"
+        android:id="@+id/tv_time"
+        android:layout_alignTop="@+id/tv_atName"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

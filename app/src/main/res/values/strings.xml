@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TwitterClient</string>
+    <string name="Tweet">TweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweetTweet</string>
+    <string name="time_stamp">Time stamp</string>
+    <string name="at_name">at Name</string>
+    <string name="user_name">User Name</string>
 </resources>
