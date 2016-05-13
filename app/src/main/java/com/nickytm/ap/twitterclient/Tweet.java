@@ -9,6 +9,7 @@ public class Tweet {
     private String atName;
     private String tweetText;
     private String timeStamp;
+    //image
 
     public Tweet(String userName, String atName, String tweetText, String timeStamp) {
         this.userName = userName;
@@ -16,6 +17,8 @@ public class Tweet {
         this.tweetText = tweetText;
         this.timeStamp = timeStamp;
     }
+
+    //get image by unique atName
 
     public String getUserName() {
         return userName;
