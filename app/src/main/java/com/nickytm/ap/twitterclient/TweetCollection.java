@@ -1,6 +1,7 @@
 package com.nickytm.ap.twitterclient;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Remy on 13-5-2016.
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 public class TweetCollection {
 
     private static TweetCollection instance;
-    private ArrayList<Tweet> tweets;
+    private List<Tweet> tweets;
 
     private TweetCollection(){
         tweets = new ArrayList<>();
@@ -23,7 +24,7 @@ public class TweetCollection {
         return instance;
     }
 
-    public ArrayList<Tweet> getTweets(){
+    public List<Tweet> getTweets(){
         return tweets;
     }
 

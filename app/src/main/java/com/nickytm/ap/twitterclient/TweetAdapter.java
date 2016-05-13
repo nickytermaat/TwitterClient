@@ -18,7 +18,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet>{
 
     public TweetAdapter(Context context, int resource, List<Tweet> objects) {
         super(context, 0, TweetCollection.getInstance().getTweets());
-        objects = tweets;
+        tweets = objects;
     }
 
     @Override
