@@ -1,13 +1,7 @@
-package com.nickytm.ap.twitterclient;
+package com.nickytm.ap.twitterclient.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * Created by Remy on 13-5-2016.
- */
 public class TweetCollection {
-
+    /*
     private static TweetCollection instance;
     private List<Tweet> tweets;
 
@@ -39,5 +33,5 @@ public class TweetCollection {
 
     public Tweet getTweet(int position){
         return tweets.get(position);
-    }
+    }*/
 }
