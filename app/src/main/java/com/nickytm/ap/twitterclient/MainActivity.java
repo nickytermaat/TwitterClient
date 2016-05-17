@@ -1,8 +1,14 @@
 package com.nickytm.ap.twitterclient;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +23,39 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = (ListView)findViewById(R.id.listView);
        // listView.setAdapter(adapter);
+    }
+
+    /**
+     * Reads an asset file and returns a string with the full contents.
+     *
+     * @param filename  The filename of the file to read.
+     * @return          The contents of the file.
+     * @throws IOException  If file could not be found or not read.
+     */
+    private String readAssetIntoString(String filename) throws IOException {
+        BufferedReader br = null;
+        StringBuilder sb = new StringBuilder();
+
+        String line;
+        try {
+            InputStream is = getAssets().open(filename, AssetManager.ACCESS_BUFFER);
+            br = new BufferedReader(new InputStreamReader(is));
+            while ((line = br.readLine()) != null) {
+                sb.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw e;
+        } finally {
+            if (br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return sb.toString();
     }
 
 
