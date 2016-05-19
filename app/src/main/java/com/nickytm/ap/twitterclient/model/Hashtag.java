@@ -9,4 +9,6 @@ Hashtag extends Entity {
         super(indices);
         this.text = text;
     }
+
+
 }

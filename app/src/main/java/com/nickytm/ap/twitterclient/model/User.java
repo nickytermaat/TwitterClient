@@ -13,7 +13,7 @@ public class User {
     private Entity entity;
     private int favourites_count;
     private int following_count;
-    private int id;
+    private long id;
     private String id_str;
     private String name;
     private String profile_background_color;
@@ -50,4 +50,5 @@ public class User {
         this.profile_background_color = profile_background_color;
         this.screen_name = screen_name;
     }
+
 }
