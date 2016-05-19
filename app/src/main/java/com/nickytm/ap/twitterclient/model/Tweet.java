@@ -1,5 +1,8 @@
 package com.nickytm.ap.twitterclient.model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Tweet {
 
     private Coordinate coordinate;
@@ -28,6 +31,21 @@ public class Tweet {
         this.place = place;
         this.text = text;
         this.user = user;
+    }
+
+    public Tweet (JSONObject jsonObject) throws JSONException{
+        this.user = new User(jsonObject.getJSONObject("user"));
+        //this.coordinate = jsonObject.get
+        this.created_at = jsonObject.getString();
+        //this.entity = jsonObject.get
+        this.favorited_count = jsonObject.getInt("favorite_count");
+        this.favorited = jsonObject.getBoolean("favourited");
+        this.id = jsonObject.getInt("id");
+        this.id_str = jsonObject.getString("id_str");
+        this.retweet_count = jsonObject.getInt("retweet_count");
+        this.retweeted = jsonObject.getBoolean("retweeted");
+        this.place = place;
+        this.text = text;
     }
 
     /* private String userName;

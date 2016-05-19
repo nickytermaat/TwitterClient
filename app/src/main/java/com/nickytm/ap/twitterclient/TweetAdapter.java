@@ -17,7 +17,7 @@ public class TweetAdapter {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_tweet, parent, false);
         }
 
-        Tweet tweet = tweets.get(position);
+    Tweet tweet = tweets.get(position);
 
         TextView userName = (TextView) convertView.findViewById(R.id.tv_userName);
         TextView atName = (TextView) convertView.findViewById(R.id.tv_atName);

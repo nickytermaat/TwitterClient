@@ -1,5 +1,8 @@
 package com.nickytm.ap.twitterclient.model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class User {
 
     private boolean contributers_enabled;
@@ -15,6 +18,22 @@ public class User {
     private String name;
     private String profile_background_color;
     private String screen_name;
+
+    public User (JSONObject jsonObject) throws JSONException{
+        this.contributers_enabled = jsonObject.getBoolean("contributors_enabled");
+        this.created_at = jsonObject.getString("created_at");
+        this.default_profile = jsonObject.getBoolean("default_profile");
+        this.default_profile_picture = jsonObject.getBoolean("default_profile_image");
+        this.description = jsonObject.getString("description");
+        //this.entity = jsonObject.get
+        //this.favourites_count = jsonObject.get
+        this.following_count = following_count;
+        this.id = id;
+        this.id_str = id_str;
+        this.name = name;
+        this.profile_background_color = profile_background_color;
+        this.screen_name = screen_name;
+    }
 
     public User(boolean contributers_enabled, String created_at, boolean default_profile, boolean default_profile_picture, String description, Entity entity, int favourites_count, int following_count, int id, String id_str, String name, String profile_background_color, String screen_name) {
         this.contributers_enabled = contributers_enabled;
