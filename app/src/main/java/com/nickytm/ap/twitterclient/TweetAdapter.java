@@ -1,15 +1,24 @@
 package com.nickytm.ap.twitterclient;
 
-public class TweetAdapter {
-        //extends ArrayAdapter<Tweet>{
-/*
-    private List<Tweet> tweets;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
-    public TweetAdapter(Context context, int resource, List<Tweet> objects) {
-        super(context, 0, TweetCollection.getInstance().getTweets());
+import com.nickytm.ap.twitterclient.model.Tweet;
+
+import java.util.ArrayList;
+
+public class TweetAdapter extends ArrayAdapter<Tweet> {
+
+    private ArrayList<Tweet> tweets;
+
+    public TweetAdapter(Context context, int resource, ArrayList<Tweet> objects) {
+        super(context, resource, TweetParser.getInstance().getTweetsFromFile(context, "tweets.json"));
         tweets = objects;
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -19,16 +28,16 @@ public class TweetAdapter {
 
     Tweet tweet = tweets.get(position);
 
-        TextView userName = (TextView) convertView.findViewById(R.id.tv_userName);
-        TextView atName = (TextView) convertView.findViewById(R.id.tv_atName);
+        TextView screen_name = (TextView) convertView.findViewById(R.id.tv_userName);
+        TextView name = (TextView) convertView.findViewById(R.id.tv_atName);
         TextView tweetText = (TextView) convertView.findViewById(R.id.tv_tweet);
         TextView timeStamp = (TextView) convertView.findViewById(R.id.tv_time);
 
-        userName.setText(tweet.getUserName());
-        atName.setText(tweet.getAtName());
-        tweetText.setText(tweet.getTweetText());
-        timeStamp.setText(tweet.getTimeStamp());
+        screen_name.setText(tweet.getUser().getScreen_name());
+        name.setText(tweet.getUser().getName());
+        tweetText.setText(tweet.getText());
+        timeStamp.setText(tweet.getCreated_at());
 
         return convertView;
-    }*/
+    }
 }

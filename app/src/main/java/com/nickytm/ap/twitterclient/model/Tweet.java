@@ -48,34 +48,51 @@ public class Tweet {
         this.text = jsonObject.getString("text");
     }
 
-    /* private String userName;
-    private String atName;
-    private String tweetText;
-    private String timeStamp;
-    //image
-
-    public Tweet(String userName, String atName, String tweetText, String timeStamp) {
-        this.userName = userName;
-        this.atName = atName;
-        this.tweetText = tweetText;
-        this.timeStamp = timeStamp;
+    public Coordinate getCoordinate() {
+        return coordinate;
     }
 
-    //get image by unique atName
-
-    public String getUserName() {
-        return userName;
+    public String getCreated_at() {
+        return created_at;
     }
 
-    public String getAtName() {
-        return atName;
+    public Entity getEntity() {
+        return entity;
     }
 
-    public String getTweetText() {
-        return tweetText;
+    public int getFavorited_count() {
+        return favorited_count;
     }
 
-    public String getTimeStamp() {
-        return timeStamp;
-    }*/
+    public boolean isFavorited() {
+        return favorited;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getId_str() {
+        return id_str;
+    }
+
+    public int getRetweet_count() {
+        return retweet_count;
+    }
+
+    public boolean isRetweeted() {
+        return retweeted;
+    }
+
+    public Place getPlace() {
+        return place;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

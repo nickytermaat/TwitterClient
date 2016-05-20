@@ -51,4 +51,55 @@ public class User {
         this.screen_name = screen_name;
     }
 
+    public boolean isContributers_enabled() {
+        return contributers_enabled;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public boolean isDefault_profile() {
+        return default_profile;
+    }
+
+    public boolean isDefault_profile_picture() {
+        return default_profile_picture;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Entity getEntity() {
+        return entity;
+    }
+
+    public int getFavourites_count() {
+        return favourites_count;
+    }
+
+    public int getFollowing_count() {
+        return following_count;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getId_str() {
+        return id_str;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getProfile_background_color() {
+        return profile_background_color;
+    }
+
+    public String getScreen_name() {
+        return screen_name;
+    }
 }

@@ -15,18 +15,31 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-/**
- * Created by Nicky on 17/05/2016.
- */
 public class TweetParser {
+
+    private static TweetParser instance;
+    private ArrayList<Tweet> tweets = new ArrayList<>();
+
+    public static TweetParser getInstance(){
+        if(instance == null){
+            instance = new TweetParser();
+        }
+        return instance;
+    }
+
+    public Tweet getTweet(int position){
+        return tweets.get(position);
+    }
+
     /**
      * gets a JSON string and parses it into a list of tweets
      *
      * @param context
      * @param filename
-     * @returns a list of tweets
+     * @return a list of tweets
      */
     public ArrayList<Tweet> getTweetsFromFile(Context context, String filename){
+
         try{
             String JSONString = readAssetIntoString(context, filename);
             JSONObject jobj = new JSONObject(JSONString);
@@ -36,7 +49,11 @@ public class TweetParser {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject tweetobj = jsonArray.getJSONObject(i);
 
+                tweets.add(new Tweet(tweetobj));
+
             }
+            // return tweets?
+            return tweets;
         }
         catch(Exception e){
             Log.e(this.getClass().getSimpleName(), e.getMessage());
