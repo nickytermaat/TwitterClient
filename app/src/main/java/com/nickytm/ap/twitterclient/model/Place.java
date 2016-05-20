@@ -1,5 +1,8 @@
 package com.nickytm.ap.twitterclient.model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Place {
 
     private String country;
@@ -16,5 +19,14 @@ public class Place {
         this.name = name;
         this.place_type = place_type;
         this.url = url;
+    }
+
+    public Place(JSONObject jsonObject) throws JSONException {
+        this.country = jsonObject.getString("country");
+        this.country_code = jsonObject.getString("country_code");
+        this.id = jsonObject.getString("id");
+        this.name = jsonObject.getString("name");
+        this.place_type = jsonObject.getString("place_type");
+        this.url = jsonObject.getString("url");
     }
 }
