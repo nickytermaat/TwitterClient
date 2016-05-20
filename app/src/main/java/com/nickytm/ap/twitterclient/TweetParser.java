@@ -10,13 +10,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Exchanger;
 
 /**
  * Created by Nicky on 17/05/2016.
@@ -34,8 +31,10 @@ public class TweetParser {
             String JSONString = readAssetIntoString(context, filename);
             JSONObject jobj = new JSONObject(JSONString);
             JSONArray jsonArray = jobj.getJSONArray("statuses");
+
+            // for every element in the jsonArray, create a tweetobject
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject iobj = jsonArray.getJSONObject(i);
+                JSONObject tweetobj = jsonArray.getJSONObject(i);
 
             }
         }

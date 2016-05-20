@@ -1,5 +1,8 @@
 package com.nickytm.ap.twitterclient.model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class UserMention extends Entity {
 
     private int id;
@@ -14,4 +17,5 @@ public class UserMention extends Entity {
         this.name = name;
         this.screen_name = screen_name;
     }
-}
+
+
