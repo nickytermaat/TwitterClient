@@ -17,19 +17,7 @@ import java.util.ArrayList;
 
 public class TweetParser {
 
-    private static TweetParser instance;
     private ArrayList<Tweet> tweets = new ArrayList<>();
-
-    public static TweetParser getInstance(){
-        if(instance == null){
-            instance = new TweetParser();
-        }
-        return instance;
-    }
-
-    public Tweet getTweet(int position){
-        return tweets.get(position);
-    }
 
     /**
      * gets a JSON string and parses it into a list of tweets
@@ -50,9 +38,8 @@ public class TweetParser {
                 JSONObject tweetobj = jsonArray.getJSONObject(i);
 
                 tweets.add(new Tweet(tweetobj));
-
             }
-            // return tweets?
+
             return tweets;
         }
         catch(Exception e){

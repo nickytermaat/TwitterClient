@@ -1,11 +1,15 @@
-package com.nickytm.ap.twitterclient;
+package com.nickytm.ap.twitterclient.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
+
+import com.nickytm.ap.twitterclient.R;
+import com.nickytm.ap.twitterclient.TweetParser;
+import com.nickytm.ap.twitterclient.adapter.TweetAdapter;
 import com.nickytm.ap.twitterclient.model.Tweet;
+
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 

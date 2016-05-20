@@ -1,4 +1,4 @@
-package com.nickytm.ap.twitterclient;
+package com.nickytm.ap.twitterclient.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.nickytm.ap.twitterclient.R;
 import com.nickytm.ap.twitterclient.model.Tweet;
 
 import java.security.Timestamp;
