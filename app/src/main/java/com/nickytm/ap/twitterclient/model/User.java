@@ -26,13 +26,13 @@ public class User {
         this.default_profile_picture = jsonObject.getBoolean("default_profile_image");
         this.description = jsonObject.getString("description");
         //this.entity = jsonObject.get
-        //this.favourites_count = jsonObject.get
-        this.following_count = following_count;
-        this.id = id;
-        this.id_str = id_str;
-        this.name = name;
-        this.profile_background_color = profile_background_color;
-        this.screen_name = screen_name;
+        this.favourites_count = jsonObject.getInt("favourites_count");
+        this.following_count = jsonObject.getInt("followers_count");
+        this.id = jsonObject.getInt("id");
+        this.id_str = jsonObject.getString("id_str");
+        this.name = jsonObject.getString("name");
+        this.profile_background_color = jsonObject.getString("profile_background_color");
+        this.screen_name = jsonObject.getString("screen_name");
     }
 
     public User(boolean contributers_enabled, String created_at, boolean default_profile, boolean default_profile_picture, String description, Entity entity, int favourites_count, int following_count, int id, String id_str, String name, String profile_background_color, String screen_name) {
