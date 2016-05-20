@@ -10,7 +10,7 @@ public class Tweet {
     private Entity entity;
     private int favorited_count;
     private boolean favorited;
-    private int id;
+    private long id;
     private String id_str;
     private int retweet_count;
     private boolean retweeted;
@@ -36,16 +36,16 @@ public class Tweet {
     public Tweet (JSONObject jsonObject) throws JSONException{
         this.user = new User(jsonObject.getJSONObject("user"));
         //this.coordinate = jsonObject.get
-        this.created_at = jsonObject.getString();
+        this.created_at = jsonObject.getString("created_at");
         //this.entity = jsonObject.get
         this.favorited_count = jsonObject.getInt("favorite_count");
         this.favorited = jsonObject.getBoolean("favourited");
-        this.id = jsonObject.getInt("id");
+        this.id = jsonObject.getLong("id");
         this.id_str = jsonObject.getString("id_str");
         this.retweet_count = jsonObject.getInt("retweet_count");
         this.retweeted = jsonObject.getBoolean("retweeted");
-        this.place = place;
-        this.text = text;
+        //this.place =
+        this.text = jsonObject.getString("text");
     }
 
     /* private String userName;

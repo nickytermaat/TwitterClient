@@ -28,7 +28,7 @@ public class User {
         //this.entity = jsonObject.get
         this.favourites_count = jsonObject.getInt("favourites_count");
         this.following_count = jsonObject.getInt("followers_count");
-        this.id = jsonObject.getInt("id");
+        this.id = jsonObject.getLong("id");
         this.id_str = jsonObject.getString("id_str");
         this.name = jsonObject.getString("name");
         this.profile_background_color = jsonObject.getString("profile_background_color");
