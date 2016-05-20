@@ -13,11 +13,9 @@ import java.util.ArrayList;
 
 public class TweetAdapter extends ArrayAdapter<Tweet> {
 
-    private ArrayList<Tweet> tweets;
 
     public TweetAdapter(Context context, int resource, ArrayList<Tweet> objects) {
-        super(context, resource, TweetParser.getInstance().getTweetsFromFile(context, "tweets.json"));
-        tweets = objects;
+        super(context, resource, objects);
     }
 
     @Override
@@ -26,7 +24,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_tweet, parent, false);
         }
 
-    Tweet tweet = tweets.get(position);
+    Tweet tweet = getItem(position);
 
         TextView screen_name = (TextView) convertView.findViewById(R.id.tv_userName);
         TextView name = (TextView) convertView.findViewById(R.id.tv_atName);

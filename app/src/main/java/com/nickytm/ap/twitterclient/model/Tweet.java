@@ -39,7 +39,7 @@ public class Tweet {
         this.created_at = jsonObject.getString("created_at");
         //this.entity = jsonObject.get
         this.favorited_count = jsonObject.getInt("favorite_count");
-        this.favorited = jsonObject.getBoolean("favourited");
+        this.favorited = jsonObject.getBoolean("favorited");
         this.id = jsonObject.getLong("id");
         this.id_str = jsonObject.getString("id_str");
         this.retweet_count = jsonObject.getInt("retweet_count");

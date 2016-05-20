@@ -8,24 +8,27 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Tweet> tweets;
+    ArrayList<Tweet> tweets = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TweetAdapter tweetAdapter = new TweetAdapter(this, R.layout.list_tweet, tweets);
-
         ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(tweetAdapter);
 
         try {
             TweetParser tp = new TweetParser();
-            ArrayList<Tweet> tweets = tp.getTweetsFromFile(this, "tweets.json");
+            tweets = tp.getTweetsFromFile(this, "tweets.json");
+
+            TweetAdapter tweetAdapter = new TweetAdapter(this, R.layout.list_tweet, tweets);
+
+            listView.setAdapter(tweetAdapter);
         } catch (Exception ex) {
             System.out.println("exception occured, file not found");
         }
 
+
     }
+
 }
