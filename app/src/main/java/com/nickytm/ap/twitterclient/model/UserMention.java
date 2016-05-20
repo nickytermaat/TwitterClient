@@ -17,5 +17,6 @@ public class UserMention extends Entity {
         this.name = name;
         this.screen_name = screen_name;
     }
+}
 
 
