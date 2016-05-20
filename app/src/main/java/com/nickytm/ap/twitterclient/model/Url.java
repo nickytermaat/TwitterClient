@@ -18,8 +18,8 @@ public class Url extends Entity  {
 
     public Url(JSONObject jsonObject) throws JSONException {
         super(jsonObject.getJSONArray("indices"));
-        this.display_url = display_url;
-        this.expanded_url = expanded_url;
-        this.url = url;
+        this.display_url = jsonObject.getString("display_url");
+        this.expanded_url = jsonObject.getString("expanded_url");
+        this.url = jsonObject.getString("url");
     }
 }
