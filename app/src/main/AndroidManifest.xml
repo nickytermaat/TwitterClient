@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nickytm.ap.twitterclient">
 
+    <uses-sdk
+        android:maxSdkVersion="8"
+        android:targetSdkVersion="18"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
